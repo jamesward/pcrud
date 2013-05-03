@@ -1,0 +1,17 @@
+@(message: String)
+
+@main("Welcome to Play 2.1") {
+    
+    /* Full CRUD UI for BarController & TodoController */
+    @ui[BarController, TodoController]
+    
+    /* list of all Bars with details, edit & delete buttons */
+    @list[BarController]
+    
+    /* create form if None, edit form if Some */
+    @createEditForm[BarController](Some(0))
+    
+    /* display the whole Bar id = 0 */
+    @details[BarController](0)
+    
+}
